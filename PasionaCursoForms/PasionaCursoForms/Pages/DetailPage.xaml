@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PasionaCursoForms.Pages.DetailPage"
+             BackgroundColor="Navy"
+             Title="{Binding DetailModel.TrackName}">
+  <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+    <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+      <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10">
+
+        <StackLayout HorizontalOptions="FillAndExpand">
+          <Image HorizontalOptions="Center" Source="{Binding DetailModel.ArtworkUrl100}"></Image>
+        </StackLayout>
+        <StackLayout HorizontalOptions="FillAndExpand">
+          <Label Text="{Binding DetailModel.TrackName}" TextColor="White" FontAttributes="Bold"/>
+          <Label Text="{Binding DetailModel.SellerName}" TextColor="White" />
+        </StackLayout>
+        <StackLayout HorizontalOptions="FillAndExpand">
+          <Label Text="{Binding DetailModel.Description}" TextColor="White" />
+        </StackLayout>
+
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+</ContentPage>

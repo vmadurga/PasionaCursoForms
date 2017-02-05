@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using System.Net.Http;
 using Newtonsoft.Json;
 using PasionaCursoForms.Models;
+using PasionaCursoForms.Pages;
 
 namespace PasionaCursoForms.ViewModels
 {
@@ -59,5 +60,11 @@ namespace PasionaCursoForms.ViewModels
                 await _currentPage.DisplayAlert("Error", "Ha ocurrido un error al realizar la búsqueda", "Aceptar");
             }
         }
+
+        public async void OpenDetail(Result selectedItem)
+        {
+            await _currentPage.Navigation.PushAsync(new DetailPage(selectedItem));
+        }
+
     }
 }

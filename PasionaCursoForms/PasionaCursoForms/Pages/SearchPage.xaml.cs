@@ -1,4 +1,5 @@
-﻿using PasionaCursoForms.ViewModels;
+﻿using PasionaCursoForms.Models;
+using PasionaCursoForms.ViewModels;
 using Xamarin.Forms;
 
 namespace PasionaCursoForms.Pages
@@ -9,6 +10,12 @@ namespace PasionaCursoForms.Pages
         {
             BindingContext = new SearchViewModel(this);
             InitializeComponent();
+        }
+
+        private void SearchListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var currentViewModel = BindingContext as SearchViewModel;
+            currentViewModel?.OpenDetail(e.SelectedItem as Result);
         }
     }
 }

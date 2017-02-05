@@ -19,6 +19,7 @@
       <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <ListView x:Name="SearchListView"
                   HasUnevenRows="True"
+                  ItemSelected="SearchListView_OnItemSelected"
                   ItemsSource="{Binding SearchList}"
                   VerticalOptions="FillAndExpand">
           <ListView.ItemTemplate>
