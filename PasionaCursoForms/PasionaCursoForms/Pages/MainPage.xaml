@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PasionaCursoForms.Pages.MainPage"
+             BackgroundColor="Navy">
+
+  <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center" Padding="10">
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+      <Label Text="Usuario" TextColor="White"
+             HorizontalOptions="FillAndExpand" />
+
+      <Entry HorizontalOptions="FillAndExpand" Text="{Binding Username}" TextColor="White"/>
+
+      <Label Text="Contraseña" TextColor="White"
+           HorizontalOptions="FillAndExpand" />
+
+      <Entry HorizontalOptions="FillAndExpand" Text="{Binding Password}" TextColor="White"/>
+
+      <Button HorizontalOptions="FillAndExpand" Text="Login" Command="{Binding LoginCommand}" TextColor="Navy" BackgroundColor="White"></Button>
+
+    </StackLayout>
+  </StackLayout>
+
+</ContentPage>

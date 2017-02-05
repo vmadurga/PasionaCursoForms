@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace PasionaCursoForms
 {
@@ -13,7 +8,7 @@ namespace PasionaCursoForms
         {
             InitializeComponent();
 
-            MainPage = new PasionaCursoForms.MainPage();
+            MainPage = new Pages.MainPage();
         }
 
         protected override void OnStart()
