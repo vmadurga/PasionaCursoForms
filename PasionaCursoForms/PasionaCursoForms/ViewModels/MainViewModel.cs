@@ -1,4 +1,5 @@
 ﻿using System.Windows.Input;
+using PasionaCursoForms.Pages;
 using PasionaCursoForms.ViewModels.Base;
 using Xamarin.Forms;
 
@@ -51,7 +52,7 @@ namespace PasionaCursoForms.ViewModels
             }
             else
             {
-                //Do something
+                await _currentPage.Navigation.PushAsync(new SearchPage());
             }
         }
     }

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PasionaCursoForms.Pages.SearchPage"
+             BackgroundColor="Navy"
+             Title="Search">
+  <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start" Padding="10">
+      <Label Text="Buscador" HorizontalTextAlignment="Center" TextColor="White" />
+      <StackLayout Orientation="Horizontal">
+        <Entry HorizontalOptions="FillAndExpand" Placeholder="Texto" TextColor="Silver" PlaceholderColor="Silver" Text="{Binding SearchText}"/>
+        <Button Text="Search" Command="{Binding SearchCommand}" TextColor="Navy" BackgroundColor="White"/>
+      </StackLayout>
+    </StackLayout>
+
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+      <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <ListView x:Name="SearchListView"
+                  HasUnevenRows="True"
+                  ItemsSource="{Binding SearchList}"
+                  VerticalOptions="FillAndExpand">
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell>
+                <ViewCell.View>
+
+                  <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <StackLayout HorizontalOptions="FillAndExpand" Padding="10">
+                      <Label Text="{Binding TrackName}" TextColor="White" FontAttributes="Bold"/>
+                      <Label Text="{Binding SellerName}" TextColor="White" />
+                    </StackLayout>
+                    <BoxView BackgroundColor="White" HeightRequest="1"></BoxView>
+                  </StackLayout>
+
+                </ViewCell.View>
+              </ViewCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+      </StackLayout>
+
+    </StackLayout>
+
+  </StackLayout>
+</ContentPage>

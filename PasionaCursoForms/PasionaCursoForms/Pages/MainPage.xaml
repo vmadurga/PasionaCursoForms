@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PasionaCursoForms.Pages.MainPage"
-             BackgroundColor="Navy">
+             BackgroundColor="Navy"
+             Title="Login">
 
   <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center" Padding="10">
 
@@ -10,12 +11,12 @@
       <Label Text="Usuario" TextColor="White"
              HorizontalOptions="FillAndExpand" />
 
-      <Entry HorizontalOptions="FillAndExpand" Text="{Binding Username}" TextColor="White"/>
+      <Entry HorizontalOptions="FillAndExpand" Text="{Binding Username}" TextColor="Silver"/>
 
       <Label Text="Contraseña" TextColor="White"
            HorizontalOptions="FillAndExpand" />
 
-      <Entry HorizontalOptions="FillAndExpand" Text="{Binding Password}" TextColor="White"/>
+      <Entry HorizontalOptions="FillAndExpand" Text="{Binding Password}" TextColor="Silver"/>
 
       <Button HorizontalOptions="FillAndExpand" Text="Login" Command="{Binding LoginCommand}" TextColor="Navy" BackgroundColor="White"></Button>
 
