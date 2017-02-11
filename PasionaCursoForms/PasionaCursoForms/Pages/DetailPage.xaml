@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:PasionaCursoForms.Controls;assembly=PasionaCursoForms"
              x:Class="PasionaCursoForms.Pages.DetailPage"
              BackgroundColor="Navy"
              Title="{Binding DetailModel.TrackName}">
   <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+    <controls:BannerControl PageTitle="{Binding DetailModel.TrackName}" />
     <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
       <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10">
 
@@ -21,5 +23,6 @@
 
       </StackLayout>
     </ScrollView>
+  <Button HorizontalOptions="FillAndExpand" Text="Send email" Command="{Binding SendEmailCommand}" TextColor="Navy" BackgroundColor="White" />
   </StackLayout>
 </ContentPage>

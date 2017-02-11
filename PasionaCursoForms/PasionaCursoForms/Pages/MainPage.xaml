@@ -1,26 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:PasionaCursoForms.Controls;assembly=PasionaCursoForms"
              x:Class="PasionaCursoForms.Pages.MainPage"
              BackgroundColor="Navy"
              Title="Login">
+  <StackLayout VerticalOptions="FillAndExpand">
+    <controls:BannerControl PageTitle="Login" />
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="10">
 
-  <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center" Padding="10">
+      <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+        <Label Text="Usuario" TextColor="White"
+               HorizontalOptions="FillAndExpand" />
 
-    <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand">
-      <Label Text="Usuario" TextColor="White"
+        <Entry HorizontalOptions="FillAndExpand" Text="{Binding Username}" TextColor="Silver"/>
+
+        <Label Text="Contraseña" TextColor="White"
              HorizontalOptions="FillAndExpand" />
 
-      <Entry HorizontalOptions="FillAndExpand" Text="{Binding Username}" TextColor="Silver"/>
+        <Entry HorizontalOptions="FillAndExpand" Text="{Binding Password}" TextColor="Silver"/>
 
-      <Label Text="Contraseña" TextColor="White"
-           HorizontalOptions="FillAndExpand" />
+        <Button HorizontalOptions="FillAndExpand" Text="Login" Command="{Binding LoginCommand}" Style="{StaticResource BigButtonStyle}"></Button>
 
-      <Entry HorizontalOptions="FillAndExpand" Text="{Binding Password}" TextColor="Silver"/>
+        <controls:CustomLabel TextColor="White" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" />
 
-      <Button HorizontalOptions="FillAndExpand" Text="Login" Command="{Binding LoginCommand}" TextColor="Navy" BackgroundColor="White"></Button>
-
+      </StackLayout>
     </StackLayout>
   </StackLayout>
-
 </ContentPage>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Windows.Input;
 using PasionaCursoForms.ViewModels.Base;
 using Xamarin.Forms;
@@ -57,6 +58,7 @@ namespace PasionaCursoForms.ViewModels
             }
             catch (Exception ex)
             {
+                Debug.WriteLine(ex.ToString());
                 await _currentPage.DisplayAlert("Error", "Ha ocurrido un error al realizar la búsqueda", "Aceptar");
             }
         }

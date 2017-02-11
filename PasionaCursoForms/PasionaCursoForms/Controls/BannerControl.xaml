@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="PasionaCursoForms.Controls.BannerControl"
+             BackgroundColor="Black"
+             HorizontalOptions="FillAndExpand">
+  <Label x:Name="TitleLabel" 
+         Margin="10"
+         TextColor="White"
+         FontAttributes="Bold"
+         HorizontalOptions="Center" 
+         VerticalOptions="Center" 
+         HorizontalTextAlignment="Center" 
+         VerticalTextAlignment="Center" />
+</StackLayout>

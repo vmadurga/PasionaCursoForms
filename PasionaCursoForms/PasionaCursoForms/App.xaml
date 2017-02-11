@@ -5,6 +5,13 @@
   <Application.Resources>
 
     <!-- Application resource dictionary -->
+    <ResourceDictionary>
+      <Style x:Key="BigButtonStyle" TargetType="Button">
+        <Setter Property="TextColor" Value="Navy" />
+        <Setter Property="BackgroundColor" Value="White" />
+      </Style>
+    </ResourceDictionary>
+
 
   </Application.Resources>
 </Application>
